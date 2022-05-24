@@ -40,7 +40,7 @@ process.on('uncaughtException', function (err) { console.log(err) });
 process.on('unhandledRejection', function (err) { console.log(err) });
 
 const execSync = require('child_process').execSync;
-execSync('rm -rf proxy.txt;wget "proxy api, type socks4" -O proxy.txt');
+execSync('rm -rf proxy.txt;wget "https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks4&timeout=10000&country=all" -O proxy.txt');
 console.log('The proxies were successfully downloaded from the API.')   
 
 async function GetCookies(){
