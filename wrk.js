@@ -19,7 +19,7 @@ const osPlatform = os.platform();
 if (/^win/i.test(osPlatform)) {
     executablePath = '';
 }else if (/^linux/i.test(osPlatform)) {
-    executablePath = '/usr/bin/chromium';
+    executablePath = '/usr/bin/chrome';
 }
 var COOKIES;
 const {spawn} = require('child_process')
